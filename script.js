@@ -1,5 +1,5 @@
 const API_URL =
-  'https://script.google.com/macros/s/AKfycbx2GG4R9RJ6PaiBDp2khF-FESTqr8XxgcL8phqwLTilYS48c8SFzS6Xb5dURIHDYQcS/exec'
+  'https://script.google.com/macros/s/AKfycbzaGtE6kYi050Po-sKv7azuAVV4k9vJbiSsI8UkrfsKEOFal9d1efg6Pd3QWzxGu1feeg/exec'
 // ------------------------------------------------------------------
 
 // Variabel global untuk menyimpan data
