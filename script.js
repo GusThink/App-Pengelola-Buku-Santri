@@ -60,7 +60,8 @@ function updateThemeIcon(isDark) {
 async function loadData() {
   showLoader(true)
   try {
-    const response = await fetch(API_URL)
+    // Mengubah dari GET ke POST untuk mengatasi masalah CORS pada Google Script
+    const response = await fetch(API_URL, { method: 'POST' })
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
@@ -200,8 +201,9 @@ async function updateStatus(id, checkbox) {
   try {
     const response = await fetch(API_URL, {
       method: 'POST',
+      // Mengubah Content-Type untuk menghindari preflight request (CORS)
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain;charset=utf-8',
       },
       body: JSON.stringify({
         id: id,
